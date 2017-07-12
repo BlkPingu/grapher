@@ -3,6 +3,8 @@ import java.util.Random;
 
 
 public class Controller {
+
+	sout
 	
 	Scanner in = new Scanner (System.in);
 	Graph_start g;
@@ -30,7 +32,7 @@ public class Controller {
 								end = true;
 							}
 							else 
-								System.out.println("Der Knoten existiert bereits. Bitte wählen Sie einen anderen Namen!");
+								System.out.println("Der Knoten existiert bereits. Bitte wï¿½hlen Sie einen anderen Namen!");
 						}
 						break;
 					case 2:
@@ -43,7 +45,7 @@ public class Controller {
 							ok = g.controllEdge(r, t);
 							equal = r.equals(t);
 							if (equal == true || ok == false){
-								System.out.println("Wählen Sie einen anderen Zielknoten aus!");
+								System.out.println("Wï¿½hlen Sie einen anderen Zielknoten aus!");
 								r = null;
 								t = null;
 							}
@@ -55,13 +57,13 @@ public class Controller {
 						}	
 						break;
 					case 3:
-						System.out.println("Welchen Knoten wollen Sie löschen?");
+						System.out.println("Welchen Knoten wollen Sie lï¿½schen?");
 						g.knotenausgabe();
 						int wahl = in.nextInt() - 1;
 						g.deleteNode(wahl);
 						break;
 					case 4:
-						System.out.println("Welche Kante wollen Sie löschen?");
+						System.out.println("Welche Kante wollen Sie lï¿½schen?");
 						g.print();
 						int choice2 = in.nextInt();
 						g.deleteEdge(choice2);
@@ -117,21 +119,21 @@ public class Controller {
 	public void printMainInfo() {
 		System.out.println("Mit welchem Graphen wollen Sie arbeiten?");
 		System.out.println("(1) Eigenen Graphen erstellen");
-		System.out.println("(2) Zufälliger Graph");
+		System.out.println("(2) Zufï¿½lliger Graph");
 		System.out.println("(0) Ende des Programms");
 	}
 	
 	public void printInfo1() {
-		System.out.println("Was möchten Sie tun?\n\n");
-		System.out.println("(1) Knoten hinzufügen");
-		System.out.println("(2) Kante hinzufügen");
-		System.out.println("(3) Knoten löschen");
-		System.out.println("(4) Kante löschen");
+		System.out.println("Was mï¿½chten Sie tun?\n\n");
+		System.out.println("(1) Knoten hinzufï¿½gen");
+		System.out.println("(2) Kante hinzufï¿½gen");
+		System.out.println("(3) Knoten lï¿½schen");
+		System.out.println("(4) Kante lï¿½schen");
 		System.out.println("(5) Graph anzeigen");
 		System.out.println("(6)  Dejkstra-Algorithmus");
 		System.out.println("(7) Graph in externe Datei speichern");
 		System.out.println("(8) Graph aus externer Datei lesen");
-		System.out.println("(9) Zurück ins Hauptmenü");
+		System.out.println("(9) Zurï¿½ck ins Hauptmenï¿½");
 		System.out.println("(0) Ende des Programms");
 		//System.out.println("");
 	}
@@ -140,7 +142,7 @@ public class Controller {
 		System.out.println("(1) Dejkstra-Algorithmus");
 		System.out.println("(2) Graph in externe Datei speichern");
 		System.out.println("(3) Graph aus externer Datei lesen");
-		System.out.println("(4) Zurück ins Hauptmenü");
+		System.out.println("(4) Zurï¿½ck ins Hauptmenï¿½");
 		System.out.println("(0) Ende des Programms");
 	}
 	

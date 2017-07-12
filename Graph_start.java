@@ -3,6 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Graph_start {
+
 	BufferedWriter f;
 	public int knzahl = 0;
 	private int[][] kante; // Kantenmatrix
@@ -34,6 +35,9 @@ public class Graph_start {
 
 	public void newNode(String Kn) {
 		// Pruefen, ob Knoten schon existiert fehlt noch!
+
+		System.out.println("miau");
+
 		knoten[knzahl] = Kn;
 		knzahl++;
 	}
@@ -54,7 +58,7 @@ public class Graph_start {
 		if (n1 != -1 && n2 != -1 && kante[n2][n1] == 0 && kante[n1][n2] == 0)
 			kante[n1][n2] = wert;
 		else
-			System.out.println("Keine Speicherung möglich, da bereits eine Verbindung der Knoten existiert.");
+			System.out.println("Keine Speicherung mï¿½glich, da bereits eine Verbindung der Knoten existiert.");
 	}
 
 	public void print() {
@@ -83,11 +87,11 @@ public class Graph_start {
 		
 		for (int i = 0; i < knzahl; i++) {
 			if (knoten[i] == null) {
-				//Aufrücken der Knoten, damit keine Lücke im Array bleibt
+				//Aufrï¿½cken der Knoten, damit keine Lï¿½cke im Array bleibt
 				for (int j = i; j < knzahl; j++) {
 					knoten [j] = knoten [j+1];
 				}
-				//Aufrücken der Kantenmatrix, damit keine Lücke im Array bleibt
+				//Aufrï¿½cken der Kantenmatrix, damit keine Lï¿½cke im Array bleibt
 				for (int m = 0; m < knzahl; m++) {
 					for (int j = i; j < knzahl; j++) {
 						kante[m][j] = kante[m][j+1];
